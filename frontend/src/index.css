@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand colors - Sapphire/Indigo Palette */
+  --brand-primary: #6366f1;   /* Indigo 500 */
+  --brand-secondary: #4f46e5; /* Indigo 600 */
+  --brand-glow: rgba(99, 102, 241, 0.4);
+  
+  /* Dark Mode (Default) - Semantic Variables */
+  --bg-primary: #0a0f1e;
+  --bg-nav: rgba(10, 15, 30, 0.8);
+  --glass-bg: rgba(17, 24, 39, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --text-main: #f1f5f9;
+  --text-muted: #9ca3af;
+  --text-dim: #6b7280;
+  --input-bg: rgba(31, 41, 55, 0.8);
+  --input-border: #374151;
+  --navy: #0a0f1e;
+  --navy-card: #111827;
+  --navy-border: #1f2937;
+}
+
+[data-theme='light'] {
+  /* Light Mode - Semantic Variables */
+  --bg-primary: #ffffff;
+  --bg-nav: rgba(255, 255, 255, 0.8);
+  --glass-bg: rgba(255, 255, 255, 0.95);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --text-main: #1e293b; 
+  --text-muted: #475569;
+  --text-dim: #64748b;
+  --input-bg: #f8fafc;
+  --input-border: #e2e8f0;
+  --navy: #ffffff;
+  --navy-card: #f8fafc;
+  --navy-border: #f1f5f9;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Global utility override for theme compatibility */
+.text-white { color: var(--text-main) !important; }
+.text-slate-300 { color: var(--text-muted) !important; }
+.text-slate-400 { color: var(--text-muted) !important; }
+.text-slate-500 { color: var(--text-dim) !important; }
+.text-slate-600 { color: var(--text-dim) !important; opacity: 0.8; }
+
+/* Brand color mappings - REPLACING ORANGE WITH INDIGO */
+.text-coral-400 { color: var(--brand-primary) !important; }
+.text-coral-500 { color: var(--brand-primary) !important; }
+.bg-coral-500 { background-color: var(--brand-primary) !important; }
+.bg-coral-600 { background-color: var(--brand-secondary) !important; }
+.shadow-coral-500\/40 { box-shadow: 0 10px 15px -3px var(--brand-glow) !important; }
+.shadow-coral-500\/30 { box-shadow: 0 4px 6px -1px var(--brand-glow) !important; }
+.hover\:bg-coral-600:hover { background-color: var(--brand-secondary) !important; }
+.border-coral-500\/30 { border-color: var(--brand-glow) !important; }
+.hover\:border-coral-400\/40:hover { border-color: var(--brand-glow) !important; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--text-dim); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--brand-primary); }
+
+/* Glass card */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Gradient text - Sapphire to Indigo to Violet */
+.gradient-text {
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 50%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow button */
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.btn-glow::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 0; height: 0;
+  background: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  transform: translate(-50%,-50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+.btn-glow:hover::before { width: 300px; height: 300px; }
+
+/* Input field */
+.input-field {
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 10px;
+  color: var(--text-main);
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.3s, color 0.3s;
+  font-family: 'DM Sans', sans-serif;
+}
+.input-field:focus {
+  outline: none;
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 3px var(--brand-glow);
+}
+.input-field option { background: var(--navy-card); color: var(--text-main); }
