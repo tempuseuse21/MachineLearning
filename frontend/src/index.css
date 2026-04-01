@@ -3,12 +3,9 @@
 @tailwind utilities;
 
 :root {
-  /* Brand colors - Sapphire/Indigo Palette */
-  --brand-primary: #6366f1;   /* Indigo 500 */
-  --brand-secondary: #4f46e5; /* Indigo 600 */
+  --brand-primary: #6366f1;
+  --brand-secondary: #4f46e5;
   --brand-glow: rgba(99, 102, 241, 0.4);
-  
-  /* Dark Mode (Default) - Semantic Variables */
   --bg-primary: #0a0f1e;
   --bg-nav: rgba(10, 15, 30, 0.8);
   --glass-bg: rgba(17, 24, 39, 0.7);
@@ -24,7 +21,6 @@
 }
 
 [data-theme='light'] {
-  /* Light Mode - Semantic Variables */
   --bg-primary: #ffffff;
   --bg-nav: rgba(255, 255, 255, 0.8);
   --glass-bg: rgba(255, 255, 255, 0.95);
@@ -57,7 +53,7 @@ body {
 .text-slate-500 { color: var(--text-dim) !important; }
 .text-slate-600 { color: var(--text-dim) !important; opacity: 0.8; }
 
-/* Brand color mappings - REPLACING ORANGE WITH INDIGO */
+
 .text-coral-400 { color: var(--brand-primary) !important; }
 .text-coral-500 { color: var(--brand-primary) !important; }
 .bg-coral-500 { background-color: var(--brand-primary) !important; }
@@ -68,13 +64,11 @@ body {
 .border-coral-500\/30 { border-color: var(--brand-glow) !important; }
 .hover\:border-coral-400\/40:hover { border-color: var(--brand-glow) !important; }
 
-/* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg-primary); }
 ::-webkit-scrollbar-thumb { background: var(--text-dim); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--brand-primary); }
 
-/* Glass card */
 .glass {
   background: var(--glass-bg);
   backdrop-filter: blur(12px);
@@ -83,7 +77,6 @@ body {
   transition: background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Gradient text - Sapphire to Indigo to Violet */
 .gradient-text {
   background: linear-gradient(135deg, #4f46e5 0%, #6366f1 50%, #8b5cf6 100%);
   -webkit-background-clip: text;
@@ -91,7 +84,6 @@ body {
   background-clip: text;
 }
 
-/* Glow button */
 .btn-glow {
   position: relative;
   overflow: hidden;
@@ -109,7 +101,6 @@ body {
 }
 .btn-glow:hover::before { width: 300px; height: 300px; }
 
-/* Input field */
 .input-field {
   background: var(--input-bg);
   border: 1px solid var(--input-border);

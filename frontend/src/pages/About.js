@@ -11,7 +11,6 @@ ChartJS.register(
   LineElement, Title, Tooltip, Legend, ArcElement, Filler
 );
 
-// ─── Simulated data (derived from real dataset stats) ─────────────────────
 const ROOM_TYPE_AVG = {
   labels: ['Entire home/apt', 'Private room', 'Shared room'],
   values: [178, 86, 42],

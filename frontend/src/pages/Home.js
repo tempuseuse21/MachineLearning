@@ -35,7 +35,6 @@ export default function Home() {
 
   return (
     <div className="relative overflow-hidden">
-      {/* ── Background ───────────────────────────────────────────── */}
       <div className="absolute inset-0 -z-10">
         <div
           ref={heroRef}
@@ -46,7 +45,6 @@ export default function Home() {
           className="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] rounded-full opacity-10 blur-3xl"
           style={{ background: 'radial-gradient(circle, #6366f1, transparent)' }}
         />
-        {/* Grid lines */}
         <svg className="absolute inset-0 w-full h-full opacity-[0.03]" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
@@ -57,10 +55,8 @@ export default function Home() {
         </svg>
       </div>
 
-      {/* ── Hero ─────────────────────────────────────────────────── */}
       <section className="min-h-screen flex items-center justify-center px-6 pt-20">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border border-coral-500/30 text-coral-400 text-sm font-medium mb-8 animate-fade-up">
             <span className="w-2 h-2 rounded-full bg-coral-400 animate-pulse" />
             Powered by XGBoost + RandomForest ML
@@ -103,7 +99,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Stats ────────────────────────────────────────────────── */}
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
           {STATS.map((s, i) => (
@@ -120,7 +115,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Features grid ────────────────────────────────────────── */}
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
@@ -149,7 +143,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── CTA ──────────────────────────────────────────────────── */}
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto text-center glass rounded-3xl p-12 relative overflow-hidden">
           <div

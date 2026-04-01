@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-// ─── Field definitions ─────────────────────────────────────────────────────
 const FIELDS = [
   {
     key: 'city', label: 'City', type: 'select', group: 'location',
@@ -121,7 +120,6 @@ function validate(form) {
   return errs;
 }
 
-// ─── Component ─────────────────────────────────────────────────────────────
 export default function Predict() {
   const [form, setForm]       = useState(initForm);
   const [errors, setErrors]   = useState({});
